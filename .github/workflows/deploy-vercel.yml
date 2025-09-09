@@ -8,9 +8,9 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout do código
-        uses:actions/checkout@v4
+        uses: actions/checkout@v4
       - name: Instalar o Vercel CLI
-        run: npm install --global Vercel
+        run: npm install --global vercel
 
       - name: Deploy para a Vercel
         run: vercel --prod --yes --token ${{ secrets.VERCEL_TOKEN }}
